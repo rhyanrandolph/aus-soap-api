@@ -2,7 +2,6 @@
     "name": "activenetwork/aus-soap-api",
     "description": "PHP classes based on ACTIVE Network's User Service SOAP WSDL",
     "keywords": ["ACTIVE", "Active Network", "User Service", "SOAP", "API"],
-    "type": "project",
     "license": "proprietary",
     "authors": [
         {
