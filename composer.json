@@ -1,0 +1,31 @@
+{
+    "name": "activenetwork/aus-soap-api",
+    "description": "PHP classes based on ACTIVE Network's User Service SOAP WSDL",
+    "keywords": ["ACTIVE", "Active Network", "User Service", "SOAP", "API"],
+    "type": "project",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Rhyan Randolph",
+            "email": "rhyan.randolph@activenetwork.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "vlucas/phpdotenv": "~2.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~5.7",
+        "wsdl2phpgenerator/wsdl2phpgenerator": "^3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Active\\": "src/Active"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    }
+}
