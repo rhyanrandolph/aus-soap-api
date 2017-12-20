@@ -179,9 +179,7 @@ class UserServiceService extends \SoapClient
       $options = array_merge(array (
       'features' => 1,
     ), $options);
-      if (!$wsdl) {
-        $wsdl = 'http://user-vip.pint.aw.dev.activenetwork.com/foundation-user-service/user/v1/external/soap?wsdl';
-      }
+
       parent::__construct($wsdl, $options);
     }
 
