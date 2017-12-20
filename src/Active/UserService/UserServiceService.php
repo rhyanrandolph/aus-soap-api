@@ -171,14 +171,18 @@ class UserServiceService extends \SoapClient
      */
     public function __construct(array $options = array(), $wsdl = null)
     {
-      foreach (self::$classmap as $key => $value) {
-        if (!isset($options['classmap'][$key])) {
-          $options['classmap'][$key] = $value;
+        foreach (self::$classmap as $key => $value) {
+            if (!isset($options['classmap'][$key])) {
+                $options['classmap'][$key] = $value;
+            }
         }
+
+      $options = array_merge(array('features' => 1), $options);
+
+      if (is_null($wsdl)) {
+          $options['location'] = '';
+          $options['uri'] = '';
       }
-      $options = array_merge(array (
-      'features' => 1,
-    ), $options);
 
       parent::__construct($wsdl, $options);
     }
