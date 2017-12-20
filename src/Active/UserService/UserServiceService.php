@@ -177,14 +177,14 @@ class UserServiceService extends \SoapClient
             }
         }
 
-      $options = array_merge(array('features' => 1), $options);
+        $options = array_merge(array('features' => 1), $options);
 
-      if (is_null($wsdl)) {
+        if (is_null($wsdl)) {
           $options['location'] = '';
           $options['uri'] = '';
-      }
+        }
 
-      parent::__construct($wsdl, $options);
+        parent::__construct($wsdl, $options);
     }
 
     /**
